@@ -48,12 +48,12 @@ def get_vector_store():
             store.add_documents(chunks)
     return store
 
-llm = get_llm()
-vector_store = get_vector_store()
+llm = get_llm(
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=1000, chunk_overlap=150,
     separators=["\n\n", "\n", ". ", " ", ""],
 )
+vector_store = get_vector_store()
 
 prompt = ChatPromptTemplate.from_template(
     """You are a helpful assistant. Answer the question using ONLY the context below.
