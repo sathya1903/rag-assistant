@@ -48,7 +48,7 @@ def get_vector_store():
             store.add_documents(chunks)
     return store
 
-llm = get_llm(
+llm = get_llm()
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=1000, chunk_overlap=150,
     separators=["\n\n", "\n", ". ", " ", ""],
