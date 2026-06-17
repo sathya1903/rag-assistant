@@ -20,6 +20,7 @@ except Exception:
 
 CHROMA_DIR = "chroma_db"
 COLLECTION_NAME = "rag_docs"
+DOCS_DIR = "docs"
 
 st.set_page_config(page_title="RAG Q&A Assistant", page_icon="📚")
 st.title("📚 RAG Q&A Assistant")
